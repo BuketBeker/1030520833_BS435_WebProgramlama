@@ -38,4 +38,30 @@ public class UserBean {
         long n = query.getSingleResult();
         return n;
     }
+    public void registerNewUserDetails(@NotNull Long id, @NotNull String name, @NotNull String surname, @NotNull String phone){
+        if(isRegistered(id)){
+            return;
+        }
+
+        UserDetails userDetails = new UserDetails();
+        userDetails.setId(id);
+        userDetails.setName(username);
+        userDetails.setSurname(surname);
+        userDetails.setPhone(phone);
+
+        em.persist(userDetails);
+    }
+    public void registerBlogText(@NotNull Long id, @NotNull String title, @NotNull String author, @NotNull String text){
+        if(isRegistered(id)){
+            return;
+        }
+
+        Blogtext blogtext = new BlogText();
+        blogtext.setId(id);
+        userDetails.setTitle(title);
+        userDetails.setAuthor(author);
+        userDetails.setText(text);
+
+        em.persist(blogtext);
+    }
 }
