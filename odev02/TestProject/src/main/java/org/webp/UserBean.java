@@ -1,5 +1,4 @@
 package org.webp.intro.jee.ejb.stateless;
-
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
