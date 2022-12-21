@@ -11,6 +11,7 @@ import static org.junit.Assert.*;
 
 @RunWith(Arquillian.class)
 public class StatefulTest {
+
     @Deployment
     public static JavaArchive createDeployment() {
 
